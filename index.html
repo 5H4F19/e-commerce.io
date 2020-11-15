@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/fontawesome-free-5.13.1-web/css/all.css">
+</head>
+<body>
+    <div class="wrapper">
+
+        <!-- ---------------------------NAVIGATION--------------------------- -->
+
+        <div id="nav">
+            <div class="brand">SHOP.</div>
+            <div class="ul">
+                <div class="li search">
+                    <input type="text" name="" id="search" placeholder="  Search product"><i class="fa fa-search fa-lg"></i>
+                </div>
+            </div>
+            <div class="right-icon">
+                <div class="ul">
+                  
+                    <div class="li"><a href="#"><i class="fa fa-shopping-cart fa-lg"></i></a></div>
+                    <div class="li"><a href="#"><i class="fa fa-user fa-lg"></i></a></div>
+                </div>
+            </div>
+        </div>
+
+        <!----------------------MAIN ---------------------->
+
+        <div id="main">
+           <div class="slider">
+               <div class="slide"  data-slider="1"><img src="./img/joanna-kosinska-7ACuHoezUYk-unsplash.jpg" alt="" height="500"></div>
+               <div class="slide"  data-slider="2"><img src="./img/john-mark-arnold-ti4kGLkGgmU-unsplash.jpg" alt="" height="500"></div>
+               <div class="slide"  data-slider="3"><img src="./img/marvin-meyer-SYTO3xs06fU-unsplash.jpg" alt="" height="500"></div>
+               <div class="slide"  data-slider="4"><img src="./img/lum3n--RBuQ2PK_L8-unsplash.jpg" alt="" height="500"></div>
+               <div class="icons">
+                   <div>
+               <svg id="lft">
+                    <path d="M20.6667 24.6666l-2 2L8 16 18.6667 5.3333l2 2L12 16l8.6667 8.6666z"></path>
+                </svg>
+               </div>
+               <div>
+                <svg id="rgt">
+                    <path d="M11.3333 7.3333l2-2L24 16 13.3333 26.6666l-2-2L20 16l-8.6667-8.6667z"></path>
+                </svg>
+                </div>
+               </div>
+           </div>
+            <!-- <i class="fa fa-angle-left" id="lft"></i><i class="fa fa-angle-right" id="rgt"></i> -->
+           <script>
+               let current = 0;
+               const length = document.querySelectorAll('.slide').length;
+               document.querySelectorAll('.slide').forEach(e => e.style.display = 'none');
+                document.querySelectorAll('[data-slider]')[0].style.display = 'block';
+
+               document.querySelector('#rgt').addEventListener('click',()=>{
+                   document.querySelectorAll('.slide').forEach(e=>e.style.display = 'none');
+                   current++;
+                   current === length ? current = 0 :current = current;
+                   document.querySelectorAll('[data-slider]')[current].style.display = 'block';
+               });
+               document.querySelector('#lft').addEventListener('click',()=>{
+                   document.querySelectorAll('.slide').forEach(e=>e.style.display = 'none');
+                   current--;
+                   current === -1 ? current = length - 1 : current = current;
+                   document.querySelectorAll('[data-slider]')[current].style.display = 'block';
+               });
+                window.setInterval(slider,5000);
+                function slider(){
+                document.querySelectorAll('.slide').forEach(e => e.style.display = 'none');
+                current++;
+                current === length ? current = 0 : current = current;
+                document.querySelectorAll('[data-slider]')[current].style.display = 'block';
+                }
+           </script>
+        </div>
+
+
+
+        <!--------------------------------SIDEBAR-------------------------------->
+
+        <div id="sidebar">
+            <div class="head">
+                Categories
+            </div>
+            <div class="ul">
+                <div class="li" data-index="1"><a href="">Electronic devices&nbsp;<i class="fas fa-chevron-right"></i></a>
+                   <div class="ul">
+                       <div class="li"><a href="">Mobile <i class="fas fa-chevron-right"></i></a>
+                            <div class="ul">
+                                <div class="li"><a href="">Mobile  <i class="fas fa-chevron-right"></i></a></div>
+                                <div class="li"><a href="">Tablet  <i class="fas fa-chevron-right"></i></a></div>
+                                <div class="li"><a href="">Laptop  <i class="fas fa-chevron-right"></i></a></div>
+                                <div class="li"><a href="">Desktop <i class="fas fa-chevron-right"></i></a></div>
+                            </div>
+                    </div>
+                       <div class="li"><a href="">Tablet <i class="fas fa-chevron-right"></i></a></div>
+                       <div class="li"><a href="">Laptop <i class="fas fa-chevron-right"></i></a></div>
+                       <div class="li"><a href="">Desktop <i class="fas fa-chevron-right"></i></a></div>
+                    </div>
+                </div>
+                <div class="li" data-index="2"><a href="">Electronic Accessories&nbsp;<i class="fas fa-chevron-right"></i></a>
+                <div class="ul">
+                    <div class="li"><a href="">Mobile <i class="fas fa-chevron-right"></i></a></div>
+                    <div class="li"><a href="">Tablet <i class="fas fa-chevron-right"></i></a></div>
+                    <div class="li"><a href="">Laptop <i class="fas fa-chevron-right"></i></a></div>
+                    <div class="li"><a href="">Desktop <i class="fas fa-chevron-right"></i></a></div>
+                </div>
+                </div>
+                <div class="li" data-index="3"><a href="">TV and Home Applications&nbsp;<i class="fas fa-chevron-right"></i></a></div>
+                <div class="li" data-index="4"><a href="">Health & Beauty&nbsp;<i class="fas fa-chevron-right"></i></a></div>
+                <div class="li" data-index="5"><a href="">Babies and Toys&nbsp;<i class="fas fa-chevron-right"></i></a></div>
+                <div class="li" data-index="6"><a href="">Groceries and Pets&nbsp;<i class="fas fa-chevron-right"></i></a></div>
+                <div class="li" data-index="7"><a href="">Home and Lifestype&nbsp;<i class="fas fa-chevron-right"></i></a></div>
+                <div class="li" data-index="8"><a href="">Women's Fashion&nbsp;<i class="fas fa-chevron-right"></i></a></div>
+                <div class="li" data-index="9"><a href="">Men's Fashion&nbsp;<i class="fas fa-chevron-right"></i></a></div>
+                <div class="li" data-index="10"><a href="">Watches & Accessories&nbsp;<i class="fas fa-chevron-right"></i></a></div>
+                <div class="li" data-index="11"><a href="">Sports & Outdoor&nbsp;<i class="fas fa-chevron-right"></i></a></div>
+                <div class="li" data-index="12"><a href="">Automotive & Motorbike&nbsp;<i class="fas fa-chevron-right"></i></a></div>
+            </div>
+        </div>
+
+
+        <!-- --------------------------------------RECOMMENDED-------------------------------------- -->
+
+        <div id="recommended">
+            <div class="heading">
+                <div class="recomm">Recommended</div>
+                <div></div>
+                <div></div>
+                <div class="see-more">
+                    <a href="">See more <p>&xrarr;</p></a>
+                </div>     
+            </div>
+            <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+           
+            <div class="products">
+               <div class="product">
+                    <img src="./img/Hoody Mockup Detailed Colors 3.jpg" alt="" height="auto" width="170px">
+                    <p class="product_name">University black hoodie</p>
+                    <p class="product_price">&#2547;456</p>
+                    <p class="offer"> <del style="color: rgb(201, 203, 204);">&#2547;345</del>&nbsp;-45%</p>
+               </div>
+               <div class="product">
+                    <img src="./img/Hoody Mockup Detailed Colors.jpg" alt="" height="auto" width="170px">
+                    <p class="product_name">University black hoodie</p>
+                    <p class="product_price">&#2547;456</p>
+                    <p class="offer"> <del style="color: rgb(201, 203, 204);">&#2547;345</del>&nbsp;-45%</p>
+               </div>
+               <div class="product">
+                    <img src="./img/Hoody Mockup Detailed Colors4.jpg" alt="" height="auto" width="170px">
+                    <p class="product_name">University black hoodie</p>
+                    <p class="product_price">&#2547;456</p>
+                    <p class="offer"> <del style="color: rgb(201, 203, 204);">&#2547;345</del>&nbsp;-45%</p>
+               </div>
+               <div class="product">
+                    <img src="./img/Hoody Mockup Detailed Colors.jpg" alt="" height="auto" width="170px">
+                    <p class="product_name">University black hoodie</p>
+                    <p class="product_price">&#2547;456</p>
+                    <p class="offer"> <del style="color: rgb(201, 203, 204);">&#2547;345</del>&nbsp;-45%</p>
+               </div>
+               <div class="product">
+                    <img src="./img/Hoody Mockup Detailed Colors 3.jpg" alt="" height="auto" width="170px">
+                    <p class="product_name">University black hoodie</p>
+                    <p class="product_price">&#2547;456</p>
+                    <p class="offer"> <del style="color: rgb(201, 203, 204);">&#2547;345</del>&nbsp;-45%</p>
+               </div>
+               <div class="product">
+                    <img src="./img/Hoody Mockup Detailed Colors 3.jpg" alt="" height="auto" width="170px">
+                    <p class="product_name">University black hoodie</p>
+                    <p class="product_price">&#2547;456</p>
+                    <p class="offer"> <del style="color: rgb(201, 203, 204);">&#2547;345</del>&nbsp;-45%</p>
+               </div>
+              
+            </div>
+        </div>
+        <div id="new">
+            <div class="heading">
+                <div class="recomm">New Arrival</div>
+                <div></div>
+                <div></div>
+                <div class="see-more">
+                    <a href="">See more <p>&xrarr;</p></a>
+                </div>
+            </div>
+            <div class="products">
+                <div class="product">
+                    <img src="./img/Hoody Mockup Detailed Colors 3.jpg" alt="" height="auto" width="170px">
+                    <p class="product_name">University black hoodie</p>
+                    <p class="product_price">&#2547;456</p>
+                    <p class="offer"> <del style="color: rgb(201, 203, 204);">&#2547;345</del>&nbsp;-45%</p>
+                </div>
+                <div class="product">
+                    <img src="./img/Hoody Mockup Detailed Colors 3.jpg" alt="" height="auto" width="170px">
+                    <p class="product_name">University black hoodie</p>
+                    <p class="product_price">&#2547;456</p>
+                    <p class="offer"> <del style="color: rgb(201, 203, 204);">&#2547;345</del>&nbsp;-45%</p>
+                </div>
+                <div class="product">
+                    <img src="./img/Hoody Mockup Detailed Colors 3.jpg" alt="" height="auto" width="170px">
+                    <p class="product_name">University black hoodie</p>
+                    <p class="product_price">&#2547;456</p>
+                    <p class="offer"> <del style="color: rgb(201, 203, 204);">&#2547;345</del>&nbsp;-45%</p>
+                </div>
+                <div class="product">
+                    <img src="./img/Hoody Mockup Detailed Colors 3.jpg" alt="" height="auto" width="170px">
+                    <p class="product_name">University black hoodie</p>
+                    <p class="product_price">&#2547;456</p>
+                    <p class="offer"> <del style="color: rgb(201, 203, 204);">&#2547;345</del>&nbsp;-45%</p>
+                </div>
+                <div class="product">
+                    <img src="./img/Hoody Mockup Detailed Colors 3.jpg" alt="" height="auto" width="170px">
+                    <p class="product_name">University black hoodie</p>
+                    <p class="product_price">&#2547;456</p>
+                    <p class="offer"> <del style="color: rgb(201, 203, 204);">&#2547;345</del>&nbsp;-45%</p>
+                </div>
+                <div class="product">
+                    <img src="./img/Hoody Mockup Detailed Colors 3.jpg" alt="" height="auto" width="170px">
+                    <p class="product_name">University black hoodie</p>
+                    <p class="product_price">&#2547;456</p>
+                    <p class="offer"> <del style="color: rgb(201, 203, 204);">&#2547;345</del>&nbsp;-45%</p>
+                </div>
+            </div>
+        </div>
+        <div id="Flashsell">
+            <div class="heading">
+                <div class="recomm">Flash Sale</div>
+                <div></div>
+                <div></div>
+                <div class="see-more">
+                    <a href="">See more <p>&xrarr;</p></a>
+                </div>
+            </div>
+
+        
+            <div class="products">
+                <div class="product">
+                    <img src="./img/Hoody Mockup Detailed Colors 3.jpg" alt="" height="auto" width="170px">
+                    <p class="product_name">University black hoodie</p>
+                    <p class="product_price">&#2547;456</p>
+                    <p class="offer"> <del style="color: rgb(201, 203, 204);">&#2547;345</del>&nbsp;-45%</p>
+                </div>
+                <div class="product">
+                    <img src="./img/Hoody Mockup Detailed Colors 3.jpg" alt="" height="auto" width="170px">
+                    <p class="product_name">University black hoodie</p>
+                    <p class="product_price">&#2547;456</p>
+                    <p class="offer"> <del style="color: rgb(201, 203, 204);">&#2547;345</del>&nbsp;-45%</p>
+                </div>
+                <div class="product">
+                    <img src="./img/Hoody Mockup Detailed Colors 3.jpg" alt="" height="auto" width="170px">
+                    <p class="product_name">University black hoodie</p>
+                    <p class="product_price">&#2547;456</p>
+                    <p class="offer"> <del style="color: rgb(201, 203, 204);">&#2547;345</del>&nbsp;-45%</p>
+                </div>
+                <div class="product">
+                    <img src="./img/Hoody Mockup Detailed Colors 3.jpg" alt="" height="auto" width="170px">
+                    <p class="product_name">University black hoodie</p>
+                    <p class="product_price">&#2547;456</p>
+                    <p class="offer"> <del style="color: rgb(201, 203, 204);">&#2547;345</del>&nbsp;-45%</p>
+                </div>
+                <div class="product">
+                    <img src="./img/Hoody Mockup Detailed Colors 3.jpg" alt="" height="auto" width="170px">
+                    <p class="product_name">University black hoodie</p>
+                    <p class="product_price">&#2547;456</p>
+                    <p class="offer"> <del style="color: rgb(201, 203, 204);">&#2547;345</del>&nbsp;-45%</p>
+                </div>
+                <div class="product">
+                    <img src="./img/Hoody Mockup Detailed Colors 3.jpg" alt="" height="auto" width="170px">
+                    <p class="product_name">University black hoodie</p>
+                    <p class="product_price">&#2547;456</p>
+                    <p class="offer"> <del style="color: rgb(201, 203, 204);">&#2547;345</del>&nbsp;-45%</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ------------------FOOTER------------------ -->
+
+        <div id="footer">
+            <div>Footer</div>
+        </div>
+    </div>
+</body>
+</html>
